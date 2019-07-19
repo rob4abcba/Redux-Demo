@@ -7,31 +7,31 @@ import { createStore } from "redux";
 import allReducer from "./reducers";
 import { Provider } from "react-redux";
 
-// //STORE -> GLOBALIZED STATE
+// // //STORE -> GLOBALIZED STATE
 
-//ACTION (human description of what I want to do) INCREMENT
-const increment = () => {
-  return {
-    type: "INCREMENT"
-  };
-};
-const decrement = () => {
-  return {
-    type: "DECREMENT"
-  };
-};
+// //ACTION (human description of what I want to do) INCREMENT
+// const increment = () => {
+//   return {
+//     type: "INCREMENT"
+//   };
+// };
+// const decrement = () => {
+//   return {
+//     type: "DECREMENT"
+//   };
+// };
 
-//REDUCER (computer changes state to accomplish ACTION)
-const counter = (state = 0, action) => {
-  switch (action.type) {
-    case "INCREMENT":
-      return state + 1;
-    case "DECREMENT":
-      return state - 1;
-    default:
-      return state;
-  }
-};
+// //REDUCER (computer changes state to accomplish ACTION)
+// const counter = (state = 0, action) => {
+//   switch (action.type) {
+//     case "INCREMENT":
+//       return state + 1;
+//     case "DECREMENT":
+//       return state - 1;
+//     default:
+//       return state;
+//   }
+// };
 
 // let store = createStore(counter);
 const myStore = createStore(
@@ -39,13 +39,13 @@ const myStore = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
-// //Display in console
-myStore.subscribe(() => console.log(myStore.getState()));
+// // //Display in console
+// myStore.subscribe(() => console.log(myStore.getState()));
 
-// //DISPATCH
-myStore.dispatch(increment());
-// store.dispatch(decrement());
-// store.dispatch(decrement());
+// // //DISPATCH
+// myStore.dispatch(increment());
+// // store.dispatch(decrement());
+// // store.dispatch(decrement());
 
 ReactDOM.render(
   <Provider store={myStore}>
