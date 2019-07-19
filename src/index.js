@@ -7,7 +7,7 @@ import { createStore } from "redux";
 
 //STORE -> GLOBALIZED STATE
 
-//ACTION INCREMENT
+//ACTION (human description of what I want to do) INCREMENT
 const increment = () => {
   return {
     type: "INCREMENT"
@@ -19,7 +19,7 @@ const decrement = () => {
   };
 };
 
-//REDUCER
+//REDUCER (computer changes state to accomplish ACTION)
 const counter = (state = 0, action) => {
   switch (action.type) {
     case "INCREMENT":
