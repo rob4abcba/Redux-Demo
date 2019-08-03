@@ -4,6 +4,9 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement} from './actions';
 
+// RL New Redux Hooks 2019 June. 
+// useSelector takes place of mapStateToProps
+// useDispatch takes place of mapDispatchToProps
 function App() {
   const counter = useSelector(state => state.my_counter);
   const isLogged = useSelector(state => state.isLogged);
